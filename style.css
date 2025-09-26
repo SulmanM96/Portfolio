@@ -1,67 +1,109 @@
+/* Reset & Base Styles */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0 1rem;
-  background: #fdfdfd;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #fdfdfd;
   color: #333;
+  line-height: 1.6;
 }
 
-header, section {
-  max-width: 800px;
-  margin: 2rem auto;
+a {
+  color: #0057b8;
+  text-decoration: none;
 }
 
-h1, h2 {
+h1, h2, h3 {
+  margin-top: 0;
   color: #0057b8;
 }
 
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-.cert-card {
-  background: #e6f0ff;
-  padding: 1rem;
-  border-radius: 6px;
+/* Header */
+#profile-header {
   text-align: center;
-  font-weight: bold;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.cert-card:hover {
-  transform: scale(1.05);
-}
-
-#hero {
+  padding: 2rem 1rem;
   background: linear-gradient(to right, #0057b8, #00c6ff);
   color: white;
-  padding: 3rem 1rem;
-  text-align: center;
-}
-#hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-#hero p {
-  font-size: 1.2rem;
 }
 
+#profile-header a {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.sidebar {
+  flex: 1;
+  min-width: 300px;
+}
+
+.main-content {
+  flex: 2;
+  min-width: 500px;
+}
+
+/* Card Styling */
+.card {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.card ul li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.card ul li i {
+  margin-right: 8px;
+  color: #0057b8;
+}
+
+/* Timeline */
 .timeline-item {
   margin-bottom: 1.5rem;
 }
 
-section {
-  border-bottom: 1px solid #ddd;
-  padding: 2rem 0;
+.timeline-item span {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
 }
 
+/* Footer */
 footer {
   background: #f0f0f0;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar, .main-content {
+    min-width: 100%;
+  }
 }
