@@ -36,6 +36,32 @@ h1, h2 {
   transform: scale(1.05);
 }
 
+#hero {
+  background: linear-gradient(to right, #0057b8, #00c6ff);
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+#hero p {
+  font-size: 1.2rem;
+}
+
 .timeline-item {
   margin-bottom: 1.5rem;
+}
+
+section {
+  border-bottom: 1px solid #ddd;
+  padding: 2rem 0;
+}
+
+footer {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
