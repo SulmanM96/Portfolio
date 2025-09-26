@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 1rem;
+  background: #fdfdfd;
+  color: #333;
+}
+
+header, section {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+h1, h2 {
+  color: #0057b8;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cert-card {
+  background: #e6f0ff;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: scale(1.05);
+}
+
+.timeline-item {
+  margin-bottom: 1.5rem;
+}
