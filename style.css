@@ -1,11 +1,9 @@
-/* Reset & Base Styles */
+/* Base Styles */
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', Roboto, sans-serif;
   background-color: #fdfdfd;
   color: #333;
-  line-height: 1.6;
 }
 
 a {
@@ -14,65 +12,82 @@ a {
 }
 
 h1, h2, h3 {
-  margin-top: 0;
   color: #0057b8;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
+  margin-top: 0;
 }
 
 /* Header */
-#profile-header {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: linear-gradient(to right, #0057b8, #00c6ff);
+header {
+  background-color: #0057b8;
   color: white;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
-#profile-header a {
-  color: #fff;
-  font-weight: bold;
+/* Navigation */
+nav {
+  background-color: #f0f0f0;
+  padding: 0.5rem 1rem;
 }
 
-/* Layout */
-.container {
+nav ul {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-  max-width: 1200px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  font-weight: bold;
+  color: #0057b8;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-.sidebar {
-  flex: 1;
-  min-width: 300px;
-}
-
-.main-content {
-  flex: 2;
-  min-width: 500px;
-}
-
-/* Card Styling */
-.card {
-  background: #f9f9f9;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+/* Sections */
+section {
   margin-bottom: 2rem;
 }
 
-.card ul li {
+/* Skills */
+.skill-list li {
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
 }
 
-.card ul li i {
+.skill-list li i {
   margin-right: 8px;
+  color: #0057b8;
+}
+
+/* Certifications */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.cert-card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-weight: bold;
+}
+
+.cert-card i {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
   color: #0057b8;
 }
 
@@ -90,20 +105,20 @@ ul {
 
 /* Footer */
 footer {
-  background: #f0f0f0;
+  background-color: #f0f0f0;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  margin-top: 2rem;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .container {
+  nav ul {
     flex-direction: column;
+    align-items: center;
   }
 
-  .sidebar, .main-content {
-    min-width: 100%;
+  .cert-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   }
 }
