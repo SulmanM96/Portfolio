@@ -1,35 +1,73 @@
-// Initialize AOS animations
-document.addEventListener("DOMContentLoaded", function () {
-  AOS.init({
-    duration: 800,      // Animation duration in ms
-    easing: "ease-in-out", // Easing style
-    once: true,         // Only animate once per element
-    mirror: false       // Don't animate on scroll up
-  });
-});
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+}
 
-// Optional: Smooth scroll for internal links
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', function (e) {
-    const href = this.getAttribute('href');
-    if (href.startsWith('#')) {
-      e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  });
-});
+header.hero {
+  background-color: #0057b8;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
 
-// Optional: Fade in header on load
-window.addEventListener('load', () => {
-  const hero = document.querySelector('.hero');
-  if (hero) {
-    hero.style.opacity = 0;
-    hero.style.transition = 'opacity 1s ease-in-out';
-    setTimeout(() => {
-      hero.style.opacity = 1;
-    }, 100);
-  }
-});
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+nav a {
+  color: #0057b8;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.skill-list li {
+  margin-bottom: 0.5rem;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.cert-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.timeline-item span {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
