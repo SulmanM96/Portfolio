@@ -1,35 +1,35 @@
-// Initialize AOS animations
-document.addEventListener("DOMContentLoaded", function () {
-  AOS.init({
-    duration: 800,      // Animation duration in ms
-    easing: "ease-in-out", // Easing style
-    once: true,         // Only animate once per element
-    mirror: false       // Don't animate on scroll up
-  });
+// 🔄 Dynamically load HTML sections from /sections folder
+const sections = ["hero", "about", "skills", "projects", "certs", "contact"];
+
+sections.forEach(id => {
+  fetch(`sections/${id}.html`)
+    .then(res => {
+      if (!res.ok) throw new Error(`Failed to load ${id}.html`);
+      return res.text();
+    })
+    .then(html => {
+      document.getElementById(id).innerHTML = html;
+    })
+    .catch(err => {
+      console.error(`Error loading ${id}:`, err);
+    });
 });
 
-// Optional: Smooth scroll for internal links
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', function (e) {
-    const href = this.getAttribute('href');
-    if (href.startsWith('#')) {
-      e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  });
+// 🌙 Theme toggle (light/dark mode)
+const toggleBtn = document.getElementById("theme-toggle");
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  // Optional: persist theme preference
+  const isDark = document.body.classList.contains("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
-// Optional: Fade in header on load
-window.addEventListener('load', () => {
-  const hero = document.querySelector('.hero');
-  if (hero) {
-    hero.style.opacity = 0;
-    hero.style.transition = 'opacity 1s ease-in-out';
-    setTimeout(() => {
-      hero.style.opacity = 1;
-    }, 100);
+// 🌓 Load saved theme on page load
+window.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
   }
 });
