@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: #fdfdfd;
   color: #333;
 }
@@ -34,7 +34,7 @@ main {
 }
 
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .skill-list li {
@@ -54,10 +54,12 @@ section {
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   font-weight: bold;
+  transition: transform 0.3s ease;
 }
 
-.timeline-item {
-  margin-bottom: 1.5rem;
+.cert-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .timeline-item span {
