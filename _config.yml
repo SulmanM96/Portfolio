@@ -1,3 +1,11 @@
 title: Sulman Malik Portfolio
-description: Senior Infrastructure & Cloud Engineer
-theme: minima
+description: Senior Infrastructure & Cloud Engineer | Azure · AWS · DevOps
+author: Sulman Malik
+email: sulman.malik@hotmail.co.uk
+baseurl: "" # leave empty if deploying to username.github.io/repo-name
+url: "https://sulmanm96.github.io/Portfolio" # your GitHub Pages URL
+
+theme: minima # optional, only used if you want Jekyll themes
+markdown: kramdown
+plugins:
+  - jekyll-feed
