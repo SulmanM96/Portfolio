@@ -1,54 +1,96 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  background-color: #fdfdfd;
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sulman Malik | Cloud Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header id="home">
+    <div class="hero">
+      <h1>Sulman Malik</h1>
+      <p>Senior Infrastructure & Cloud Engineer</p>
+      <p>London, England · <a href="mailto:sulman.malik@hotmail.co.uk">sulman.malik@hotmail.co.uk</a></p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#career">Career</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-nav {
-  background-color: #0057b8;
-  padding: 1rem;
-  text-align: center;
-}
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Cloud Engineer with 5+ years of experience designing secure, scalable infrastructure across Azure and AWS. Passionate about automation, hybrid deployments, and technical leadership. Currently working as a freelance consultant and aspiring property developer.</p>
+    </section>
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skill-list">
+        <li>Azure: IaaS, PaaS, Bicep, AVD, Lighthouse</li>
+        <li>AWS: EC2, IAM, VPC, S3, Lambda</li>
+        <li>DevOps: Terraform, Kubernetes, Azure DevOps, GitHub Actions</li>
+        <li>Infra: VMware, Hyper-V, VPN, SQL Server</li>
+        <li>Soft Skills: Documentation, stakeholder engagement, mentoring</li>
+      </ul>
+    </section>
 
-nav a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-card">AZ-305</div>
+        <div class="cert-card">SC-100</div>
+        <div class="cert-card">AWS SAA</div>
+        <div class="cert-card">AZ-800/801</div>
+        <div class="cert-card">AI-102</div>
+        <div class="cert-card">MS-100/101</div>
+      </div>
+    </section>
 
-section {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
+    <section id="career">
+      <h2>Career Timeline</h2>
+      <div class="timeline-item">
+        <h3>Freelance Cloud Consultant</h3>
+        <span>Apr 2024 – Present</span>
+        <p>Delivered Azure/AWS projects, built AVD environments, deployed SQL apps, automated with Terraform.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Senior Infrastructure & Cloud Engineer – Speedster-IT</h3>
+        <span>Jun 2022 – Mar 2024</span>
+        <p>Architected hybrid environments, implemented Azure Lighthouse, led cloud onboarding projects.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Senior Analyst – Nutbourne</h3>
+        <span>Jul 2020 – Sep 2021</span>
+        <p>Delivered onsite and remote infrastructure support across London.</p>
+      </div>
+    </section>
 
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1rem;
-}
+    <section id="education">
+      <h2>Education</h2>
+      <p>BSc (Hons) Computer Science – City University, London (2015–2019)</p>
+    </section>
 
-.cert-card {
-  background-color: #f9f9f9;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  font-weight: bold;
-}
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:sulman.malik@hotmail.co.uk">sulman.malik@hotmail.co.uk</a></p>
+      <p>Phone: 07480 652107</p>
+      <p>GitHub: <a href="https://github.com/SulmanM96" target="_blank">SulmanM96</a></p>
+    </section>
+  </main>
 
-footer {
-  background-color: #f0f0f0;
-  text-align: center;
-  padding: 1rem;
-}
+  <footer>
+    <p>© 2025 Sulman Malik. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
